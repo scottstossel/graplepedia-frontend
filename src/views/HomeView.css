@@ -1,0 +1,14 @@
+.heading {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+h2 {
+  margin-left: 40px;
+  margin-top: 50px;
+}
