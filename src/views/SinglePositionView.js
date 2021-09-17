@@ -31,8 +31,9 @@ const SinglePositionView = ({match}) => {
       <img src={position.img} alt="" className="singleImage" />
       <p className="description">{position.description}</p>
       <ReactPlayer url={position.video} style={{margin: 'auto'}}/>
+      <h3>Techniques from this position:</h3>
       {techniques && techniques.map((technique) => {
-      if (technique.approved === 'true' && technique.position == position._id) {
+      if (technique.approved === 'true' && technique.position === position._id) {
       return <div>
         <TechniqueCard props={technique} />
       </div>

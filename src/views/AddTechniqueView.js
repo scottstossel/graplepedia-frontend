@@ -77,11 +77,13 @@ const AddTechniqueView = () => {
         />
         <select name="position" onChange={handleChange}>
           <option selected disabled>Select a position</option>
-          {positions.map(position => (
-            <option value={position._id} key={position._id}>
+          {positions.map(position => {
+            if (position.approved === 'true') {
+            return <option value={position._id} key={position._id}>
               {position.name}
             </option>
-          ))}
+            }
+          })}
         </select>
         <br />
         <button onClick={handleSubmit}>Create Technique</button>
