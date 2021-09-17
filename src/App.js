@@ -12,6 +12,7 @@ import PositionsView from "./views/PositionsView";
 import SinglePositionView from "./views/SinglePositionView";
 import SingleTechniqueView from "./views/SingleTechniqueView";
 import TechniquesView from "./views/TechniquesView";
+import LoginView from "./views/LoginView";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/addtechnique" component={AddTechniqueView} />
         <Route exact path="/editpositions/:id" component={EditPositionView}/>
         <Route exact path="/edittechniques/:id" component={EditTechniqueView}/>
+        <Route exact path="/login" component={LoginView}/>
       </Switch>
     </BrowserRouter>
 

@@ -39,16 +39,18 @@ const NavBar = ({props}) => {
               {/* List of positions */}
               <NavDropdown title="Positions" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/positions">All</NavDropdown.Item>
-                {positions && positions.map(position => (
-                  <NavDropdown.Item key={position._id} href={`/positions/${position._id}`}>
+                {positions && positions.map(position => {
+                  if (position.approved === 'true') {
+                  return <NavDropdown.Item key={position._id} href={`/positions/${position._id}`}>
                     {position.name}
                   </NavDropdown.Item>
-                ))}
+                  }
+                })}
               </NavDropdown>
               <Nav.Link href="/techniques">
                 All Techniques
               </Nav.Link>
-              <Nav.Link href="/admin">
+              <Nav.Link href="/login">
                 Admin Login
               </Nav.Link>
             </Nav>

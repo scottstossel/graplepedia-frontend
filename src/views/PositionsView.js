@@ -14,17 +14,22 @@ const PositionsView = () => {
     setPositions(response.data);
   }
 
+  
+
   return (
     <div className="container">
     <h2>Positions</h2>
-    {positions && positions.map((position) => (
-      <div key={position._id}>
-        <PositionCard props={position} />
-      </div>
-    ))}
+    {positions && positions.map((position) => {
+      if (position.approved === 'true') {
+        return <div key={position._id}>
+                <PositionCard props={position} />
+              </div>
+      } 
+      }
+    )
+    }
     </div>
-   )
-
-}
-
+   
+)
+  }
 export default PositionsView;

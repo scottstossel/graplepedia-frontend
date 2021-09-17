@@ -17,11 +17,15 @@ const TechniquesView = () => {
   return (
     <div className="container">
     <h2>Techniques</h2>
-    {techniques && techniques.map((technique) => (
-      <div>
+    {techniques && techniques.map((technique) => {
+      if (technique.approved == 'true') {
+      return <div>
         <TechniqueCard props={technique} />
       </div>
-    ))}
+      }
+    }
+    )
+    }
     </div>
    )
 
