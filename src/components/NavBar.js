@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from '../images/1200px-Wrestling_pictogram.svg.png';
+import { logOut } from "../services/authService";
 import { getPositionsFromApi } from "../services/positionService";
 
 const NavBar = ({props}) => {
@@ -50,9 +51,12 @@ const NavBar = ({props}) => {
               <Nav.Link href="/techniques">
                 All Techniques
               </Nav.Link>
-              <Nav.Link href="/login">
-                Admin Login
-              </Nav.Link>
+              <NavDropdown title="Admin" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                <NavDropdown.Item href="/edittechniques">Edit Techniques</NavDropdown.Item>
+                <NavDropdown.Item href="/editpositions">Edit Positions</NavDropdown.Item>
+                <NavDropdown.Item onClick={logOut}>Log Out</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>

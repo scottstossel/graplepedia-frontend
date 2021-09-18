@@ -2,6 +2,8 @@ import React from "react";
 import {useHistory} from 'react-router';
 import { useState } from "react";
 import { loginUserToApi } from "../services/authService";
+import './LoginView.css';
+import {Button} from 'react-bootstrap';
 
 const LoginView = () => {
   const history = useHistory();
@@ -47,7 +49,7 @@ const LoginView = () => {
         name="password"
         type="password" 
         />
-        <button onClick={handleSubmit}>Login</button>
+        <Button onClick={handleSubmit} variant="outline-primary">Login</Button>{' '}
       </form>
     </div>
   )

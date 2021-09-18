@@ -7,6 +7,7 @@ export const loginUserToApi = async (user) => {
     console.log(response.data);
     if (response.data.user) {
       localStorage.setItem('jwtgrapplepedia', JSON.stringify(response.data));
+      alert(`You are now logged in.`)
       }
     } catch (error) {
       console.log(error);
@@ -25,4 +26,5 @@ export const isAuthenticated = () => {
 
 export const logOut = async () => {
   await localStorage.removeItem('jwtgrapplepedia');
+  alert('Logged out successfully.')
 }

@@ -1,8 +1,8 @@
-import Button from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { postPositionToApi } from "../services/positionService";
-import './Form.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './AddView.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AddPositionView = () => {
   const [position, setPosition] = useState({
@@ -62,7 +62,8 @@ const AddPositionView = () => {
           type="text"
         />
         <br />
-        <button onClick={handleSubmit}>Create Position</button>
+        <Button onClick={handleSubmit} variant="outline-primary">Create Position</Button>{' '}
+        {/* <button onClick={handleSubmit} className="btn btn-outline">Create Position</button> */}
       </form>
     </div>
   );

@@ -1,14 +1,43 @@
 .heading {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
   width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
 }
 
-h2 {
-  margin-left: 40px;
-  margin-top: 50px;
+h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  color: white;
+}
+
+.home {
+  margin-top: 0;
+  background-image: url('../images/231111.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
+  background-position: center;
+}
+
+h5 {
+  -webkit-text-stroke: 1px black;
+  font-size: 30px;
+  color: white;
+  margin-top: 20px;
+}
+
+#home-p {
+  -webkit-text-stroke: 1px black;
+  font-size: 20px;
+  color: white;
+  margin-top: 0;
+  width: 70%;
 }

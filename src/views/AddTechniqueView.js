@@ -1,7 +1,7 @@
-import Button from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { getSinglePositionFromApi, imageUploadToApi, postTechniqueToApi } from "../services/techniqueService";
-import './Form.css';
+import './AddView.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { getPositionsFromApi } from "../services/positionService";
 
@@ -75,6 +75,7 @@ const AddTechniqueView = () => {
           placeholder="video link"
           type="text"
         />
+        <label>Position:</label>
         <select name="position" onChange={handleChange}>
           <option selected disabled>Select a position</option>
           {positions.map(position => {
@@ -86,7 +87,8 @@ const AddTechniqueView = () => {
           })}
         </select>
         <br />
-        <button onClick={handleSubmit}>Create Technique</button>
+        <Button onClick={handleSubmit} variant="outline-primary">Create Position</Button>{' '}
+        {/* <button onClick={handleSubmit}>Create Technique</button> */}
       </form>
     </div>
   );

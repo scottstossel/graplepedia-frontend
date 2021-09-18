@@ -13,6 +13,9 @@ import SinglePositionView from "./views/SinglePositionView";
 import SingleTechniqueView from "./views/SingleTechniqueView";
 import TechniquesView from "./views/TechniquesView";
 import LoginView from "./views/LoginView";
+import AdminRoute from "./components/AdminRoute";
+import EditTechniquesView from "./views/EditTechniquesView";
+import EditPositionsView from "./views/EditPositionsView";
 
 function App() {
   return (
@@ -26,8 +29,10 @@ function App() {
         <Route exact path="/positions/:id" component={SinglePositionView}/>
         <Route exact path="/addposition" component={AddPositionView} />
         <Route exact path="/addtechnique" component={AddTechniqueView} />
-        <Route exact path="/editpositions/:id" component={EditPositionView}/>
-        <Route exact path="/edittechniques/:id" component={EditTechniqueView}/>
+        <AdminRoute exact path="/editpositions/:id" component={EditPositionView}/>
+        <AdminRoute exact path="/editpositions" component={EditPositionsView}/>
+        <AdminRoute exact path="/edittechniques/:id" component={EditTechniqueView}/>
+        <AdminRoute exact path="/edittechniques" component={EditTechniquesView}/>
         <Route exact path="/login" component={LoginView}/>
       </Switch>
     </BrowserRouter>
