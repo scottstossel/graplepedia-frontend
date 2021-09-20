@@ -2,7 +2,7 @@ import axios from 'axios';
 const apiUrl = process.env.REACT_APP_API_URL;
 
 export const getPositionsFromApi = async () => {
-  const response = await axios.get(`http://localhost:5000/api/positions`);
+  const response = await axios.get(`${apiUrl}/positions`);
   return response;
 }
 

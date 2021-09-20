@@ -2,7 +2,7 @@ import axios from 'axios';
 const apiUrl = process.env.REACT_APP_API_URL;
 
 export const getTechniquesFromApi = async () => {
-  const response = await axios.get(`http://localhost:5000/api/techniques`);
+  const response = await axios.get(`${apiUrl}/techniques`);
   return response;
 }
 
