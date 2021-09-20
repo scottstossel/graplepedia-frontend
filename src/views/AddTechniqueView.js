@@ -88,7 +88,6 @@ const AddTechniqueView = () => {
         </select>
         <br />
         <Button onClick={handleSubmit} variant="outline-primary">Create Position</Button>{' '}
-        {/* <button onClick={handleSubmit}>Create Technique</button> */}
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 h2 {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .singleImage {
@@ -18,4 +19,8 @@ h2 {
 h3 {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+body {
+  background-color: #e4dfd9;
 }
