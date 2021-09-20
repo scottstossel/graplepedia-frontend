@@ -37,7 +37,7 @@ const TechniquesView = () => {
         placeholder="Search techniques"
         value={searchTerm}
         onChange={handleChange}
-        style={{marginBottom: "20px"}}
+        style={{marginBottom: "40px"}}
       />
 
       <Row xs={1} md={3} className="g-4">
